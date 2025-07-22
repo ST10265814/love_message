@@ -1,46 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Soulmate – Love Message Card</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soulmate – Love Message Card</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="app">
+      <h1 class="app-title">Soulmate ❤️</h1>
 
-    <div id="cardWrapper">
-    <div class="container">
-      <h1 class="app-title">Soulmate 💘</h1>
-
-      <form class="form" onsubmit="event.preventDefault(); updateCard();">
-        <input
-          type="text"
-          id="toInput"
-          placeholder="To: e.g. My Love 💖"
-          maxlength="40">
-        <input
-          type="text"
-          id="fromInput"
-          placeholder="From: e.g. Secret Admirer 💌"
-          maxlength="40">
-        <textarea
-          id="messageInput"
-          placeholder="Your heartfelt message..."
-          rows="4"
-          maxlength="250"
-        ></textarea>
+      <form class="form">
+        <input type="text" id="toInput" placeholder="To: e.g. My Love 💖" maxlength="40">
+        <input type="text" id="fromInput" placeholder="From: e.g. Secret Admirer 💌" maxlength="40">
+        <textarea id="messageInput" placeholder="Your heartfelt message..." rows="4" maxlength="250"></textarea>
         <button type="submit">Preview</button>
       </form>
 
       <div id="card" class="card">
         <div class="heart-container">
           <svg class="heart-svg" viewBox="0 0 32 29.6">
-            <path
-              d="M23.6,0C20.4,0,18,2.4,16,4.6C14,2.4,11.6,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.6,16,21.2,16,21.2s16-11.6,16-21.2
-            C32,3.8,28.2,0,23.6,0z"
-            />
+            <path d="M23.6,0C20.4,0,18,2.4,16,4.6C14,2.4,11.6,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.6,16,21.2,16,21.2s16-11.6,16-21.2
+              C32,3.8,28.2,0,23.6,0z" />
           </svg>
         </div>
         <div class="message">
@@ -48,33 +30,18 @@
           <div id="msgText">Your love message appears here...</div>
           <div id="fromText"><strong>From:</strong> ...</div>
         </div>
-        <div class="footer">Made with ❤️ by Team</div>
+        <div class="footer">Made with ❤️ by Soulmate</div>
       </div>
 
       <div class="actions">
-        <button type="button" onclick="downloadCard()">
-          Download as Image
-        </button>
-        <button type="button" onclick="downloadVideo()">
-          Download as Video
-        </button>
-        <button type="button" onclick="generateLink()">
-          Get Shareable Link
-        </button>
+        <button type="button" id="btnImage">Download as Image</button>
+        <button type="button" id="btnLink">Get Shareable Link</button>
       </div>
 
       <div id="linkOutput" class="share-link"></div>
     </div>
-     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ccapture.js/1.1.0/CCapture.all.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-toBlob/1.0.0/canvas-toBlob.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qr-code-styling/1.4.0/qr-code-styling.min.js"></script>
-   </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
